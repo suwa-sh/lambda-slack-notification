@@ -1,0 +1,79 @@
+[
+  {
+    "text": "CASE1: error - フィールド=混在, リンク=あり",
+    "attachment": {
+      "status": "error",
+      "fields": [
+        {
+          "is_short": true,
+          "title": "field-1",
+          "value": "field-1 value"
+        },
+        {
+          "is_short": true,
+          "title": "field-2",
+          "value": "field-2 value"
+        },
+        {
+          "is_short": false,
+          "title": "field-3",
+          "value": "field-3 value"
+        }
+      ],
+      "links": [
+        {
+          "text": "link-1",
+          "url": "http://link-1.example.local"
+        },
+        {
+          "text": "link-2",
+          "url": "http://link-2.example.local"
+        }
+      ]
+    }
+  },
+  {
+    "text": "CASE2: warning - フィールド=longのみ, リンク=なし",
+    "attachment": {
+      "status": "warning",
+      "fields": [
+        {
+          "is_short": false,
+          "title": "field-1",
+          "value": "field-1 value"
+        },
+        {
+          "is_short": false,
+          "title": "field-2",
+          "value": "field-2 value"
+        }
+      ]
+    }
+  },
+  {
+    "text": "CASE3: success - フィールド=shortのみ, リンク=あり",
+    "attachment": {
+      "status": "success",
+      "fields": [
+        {
+          "is_short": true,
+          "title": "field-1",
+          "value": "field-1 value"
+        },
+        {
+          "title": "field-2",
+          "value": "field-2 value"
+        }
+      ],
+      "links": [
+        {
+          "text": "link-1",
+          "url": "http://link-1.example.local"
+        }
+      ]
+    }
+  },
+  {
+    "text": "CASE4: attachmentなし"
+  }
+]
