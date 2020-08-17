@@ -22,6 +22,8 @@ class Attachment(object):
     def __init__(self, attachment):
         logger.debug("{} - attachment:{}".format(__name__, json.dumps(attachment)))
         # validation
+        if 'status' not in attachment:
+            raise ValueError("event.attachment.status is required. attachment: {}".format(attachment))
         if 'fields' not in attachment:
             raise ValueError("event.attachment.fields is required. attachment: {}".format(attachment))
 
@@ -39,7 +41,7 @@ class Attachment(object):
             return "warning"
         if status == "error":
             return "danger"
-        raise ValueError(status)
+        raise ValueError("status: {} is not supported.".format(status))
 
     def _parse_fields(self, fields):
         parsed_fields = []
