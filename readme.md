@@ -1,8 +1,8 @@
-# AWS Lambda Slack Notification Function
+# AWS Lambda function for Slack notification
 
 ## Overview
 
-Slackにメッセージを投稿します。
+Slackにメッセージを投稿するlambda functionです。
 
 ![slack_notif](images/slack_notif.png)
 
@@ -44,13 +44,13 @@ Slackにメッセージを投稿します。
 | 項目 | タイプ | 必須 | 説明 | デフォルト値 |
 |:---|:---|:---|:---|:---|
 | text | string | true | メッセージ | none |
-| attachment | object | false | - | none |
+| attachment | object | false | - | - |
 | attachment.status | enum | true | success \| warning \| error | none |
-| attachment.fields | list | false | フィールドリスト | none |
+| attachment.fields | list | false | フィールドリスト | - |
 | attachment.fields[].is_short | boolean | false | 短いフィールドか？ | true |
 | attachment.fields[].title | string | true | フィールド名 | none |
 | attachment.fields[].value | string | true | フィールド値 | none |
-| attachment.links | list | false | リンクリスト | none |
+| attachment.links | list | false | リンクリスト | - |
 | attachment.links[].text | string | true | リンクボタンのテキスト | none |
 | attachment.links[].url | string | true | リンクボタンのURL | none |
 
