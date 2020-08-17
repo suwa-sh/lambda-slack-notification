@@ -1,6 +1,6 @@
 [
   {
-    "text": "CASE1: error - フィールド=混在, リンク=あり",
+    "text": "*[CASE1]* error\nフィールド:short/long混在, リンク:あり",
     "attachment": {
       "status": "error",
       "fields": [
@@ -33,7 +33,7 @@
     }
   },
   {
-    "text": "CASE2: warning - フィールド=longのみ, リンク=なし",
+    "text": "*[CASE2]* warning\nフィールド:longのみ, リンク:なし",
     "attachment": {
       "status": "warning",
       "fields": [
@@ -51,18 +51,18 @@
     }
   },
   {
-    "text": "CASE3: success - フィールド=shortのみ, リンク=あり",
+    "text": "*[CASE3]* success\nフィールド:shortのみ, リンク:あり",
     "attachment": {
       "status": "success",
       "fields": [
         {
           "is_short": true,
           "title": "field-1",
-          "value": "field-1 value"
+          "value": "field-1の値"
         },
         {
           "title": "field-2",
-          "value": "field-2 value"
+          "value": "field-2の値1\nfield-2の値2"
         }
       ],
       "links": [
@@ -74,6 +74,6 @@
     }
   },
   {
-    "text": "CASE4: attachmentなし"
+    "text": "*[CASE4]*\nattachmentなし"
   }
 ]
